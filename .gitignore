@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+env/
+
+# OS
+.DS_Store
+
+
+# Text / data files (local only)
+code_file/
