@@ -1,28 +1,20 @@
-def read_and_preview_file(file_path, preview_chars=99, verbose=True):
-    with open(file_path, "r", encoding="utf-8") as f:
-        text = f.read()
+# Initialization
+# Accept token_to_id dictionary
+# Store it as self.token_to_id
+# Create self.id_to_token by reversing mapping
+# Store <UNK> ID in self.unk_id
+# Store <EOS> ID in self.eos_id
 
-    if verbose:
-        print(f"file name: {file_path}")
-        print(f"total number of characters: {len(text)}")
-        print(text[:preview_chars])
-        print("-" * 60)
+# Encode(text)
+# Preprocess input text using the same logic as vocab
+# For each token:
+#   if token exists → append its ID
+#   else → append unk_id
+# Append eos_id
+# Return list of IDs
 
-    return text
-
-
-def main():
-    # Book 1
-    book1_text = read_and_preview_file("text_files/aa-a-man-thinketh.txt", 99, False)
-
-    # Book 2
-    verdict_text = read_and_preview_file("text_files/the-verdict.txt")
-
-    # Book 3
-    school_of_life_text = read_and_preview_file(
-        "text_files/the-school-of-life-an-emotional-education.txt"
-    )
-
-
-if __name__ == "__main__":
-    main()
+# Decode(ids)
+# Convert IDs back to tokens using id_to_token
+# Join tokens into text
+# Fix spacing around punctuation
+# Return decoded text
