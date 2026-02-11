@@ -11,5 +11,4 @@ env/
 
 
 # Text / data files (local only)
-code_file/
-data_files/
+resource_files/
